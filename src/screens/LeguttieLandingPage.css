@@ -1,0 +1,260 @@
+/* LeguttieLandingPage.css */
+
+/* Importación de fuentes - Comfortaa se parece un poco a la fuente del letrero */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* Enfoque mobile-first */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.leguttie-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.banner {
+  background-color: #5BC0DE; /* Color azul turquesa similar al de la imagen */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.year {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dots {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.banner p {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.decorative-flags {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.flag {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid;
+  margin: 0 5px;
+  transform: rotate(180deg);
+}
+
+.flag:nth-child(odd) {
+  border-bottom-color: #D9534F; /* Rojo similar a las banderas de la imagen */
+}
+
+.flag:nth-child(even) {
+  border-bottom-color: #5CB85C; /* Verde similar a las banderas de la imagen */
+}
+
+.announcement {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border-left: 4px solid #5BC0DE;
+}
+
+.announcement h2 {
+  color: #5BC0DE;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.announcement p {
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section h2 {
+  color: #5BC0DE;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f5f9fa;
+  border-radius: 8px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #5BC0DE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: white;
+  font-size: 22px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #2E6DA4;
+}
+
+.contact-text a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  color: #5BC0DE;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #5BC0DE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    padding: 0 30px;
+  }
+  
+  .banner {
+    padding: 40px 20px;
+  }
+  
+  .banner h1 {
+    font-size: 64px;
+  }
+  
+  .year {
+    font-size: 24px;
+    left: 30px;
+    top: 20px;
+  }
+  
+  .dots {
+    font-size: 32px;
+    right: 30px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .announcement, .contact-section {
+    padding: 30px;
+  }
+  
+  .decorative-flags .flag {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid;
+    margin: 0 8px;
+  }
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 40px;
+  }
+  
+  .announcement, .contact-section {
+    padding: 40px;
+  }
+}
